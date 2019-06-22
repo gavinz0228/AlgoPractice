@@ -2,14 +2,14 @@ class Solution:
     def check(self, mid):
         lower = mid*mid
         if lower == self.target:
-            return "e"
+            return 0
         upper = (mid+1)*(mid + 1)
         if self.target >= upper :
-            return "ts"
+            return -1
         elif self.target < lower:
-            return "tb"
+            return 1
         else:
-            return "e"
+            return 0
     def mySqrt(self, x: int) -> int:
         if x == 1 or x == 0:
             return x
@@ -19,12 +19,11 @@ class Solution:
         while lo < hi:
             mid = int((hi+lo) / 2)
             res = self.check(mid)
-            if res == "e":
+            if res == 0:
                 return mid
-            elif res == "tb":
+            elif res == 1:
                 hi = mid
             else:
                 lo = mid
             
-
             
