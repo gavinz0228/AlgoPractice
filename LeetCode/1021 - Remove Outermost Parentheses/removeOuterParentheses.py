@@ -1,6 +1,5 @@
 class Solution:
     def removeOuterParentheses(self, S: str) -> str:
-        outermost = None
         length = len(S)
         i = 0
         cur = []
