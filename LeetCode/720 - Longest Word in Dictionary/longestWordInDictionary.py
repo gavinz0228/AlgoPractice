@@ -10,9 +10,7 @@ class Solution(object):
         wl.sort()
         ws = set( w[1] for w in wl if w[0] == 1)
         res = [min(ws)]
-        #print(ws)
         for i in range(len(ws) - 1, len(wl)):
-            newRes = []
             if wl[i][1][:-1] in ws:
                 ws.add(wl[i][1])
                 if not res or len(wl[i][1]) > len(res[-1])  or wl[i][1] < res[-1]:
