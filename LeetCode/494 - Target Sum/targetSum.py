@@ -1,3 +1,4 @@
+from typing import List
 from functools import lru_cache
 from collections import defaultdict
 class Solution:
