@@ -26,4 +26,30 @@ class Solution:
                     n.left = None
 
         return result
+"""
+#Solution using set to remember visited node
+class Solution:
+    def postorderTraversal(self, root: TreeNode) -> List[int]:
+        if not root:
+            return root
+        result = []
+        stack = [root]
+        added = set([None])
+        while stack:
+
+            n = stack[-1]
+            if n.left in added and n.right in added:
+                stack.pop()
+                result.append(n.val)
+            else:
+                if n.right and n.right not in added:
+                    stack.append(n.right)
+                    added.add(n.right)
+                    #print(stack)
+                if n.left  and n.left not in added:
+                    stack.append(n.left)
+                    added.add(n.left)
+
+        return result
             
+"""
