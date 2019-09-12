@@ -45,3 +45,4 @@ class Solution(object):
         self.aux(root.left, lht)
         self.aux(root.right, rht)
         print("end", ht)
+print()
