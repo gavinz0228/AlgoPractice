@@ -9,7 +9,6 @@ def answer(l, t):
             return [-1, -1]
     for i in range(ln):
         for j in range(1, ln - i + 1):
-            print(i,j)
             if sum(l[i:i+j]) == t:
                 return [i, i + j - 1]
     return [-1, -1]
