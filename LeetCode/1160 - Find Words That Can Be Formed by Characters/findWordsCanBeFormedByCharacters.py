@@ -16,4 +16,3 @@ class Solution:
             if match:
                 total += len(w)
         return total
-                    
