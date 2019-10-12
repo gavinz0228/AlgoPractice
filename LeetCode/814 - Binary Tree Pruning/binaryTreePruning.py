@@ -7,8 +7,9 @@
 
 class Solution:
     def pruneTree(self, root: TreeNode) -> TreeNode:
-        self.aux(root)  
+        self.aux(root)
         return root
+
     def aux(self, root):
         if not root:
             return True
