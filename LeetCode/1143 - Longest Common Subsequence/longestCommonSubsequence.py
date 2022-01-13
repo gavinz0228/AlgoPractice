@@ -55,5 +55,4 @@ class Solution:
                     dp[i+1][j+1] = dp[i][j] + 1
                 else:
                     dp[i+1][j+1] = max(dp[i+1][j], dp[i][j+1])
-        print(dp)
         return dp[len1][len2]
