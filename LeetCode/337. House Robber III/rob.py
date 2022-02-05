@@ -67,3 +67,24 @@ class Solution:
             cache[root] = res
             return res
         return aux(root)
+
+#solution without memerization
+"""
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rob(self, root: Optional[TreeNode]) -> int:
+        def aux(root):
+            if not root:
+                return 0, 0
+            lc, lgc = aux(root.left)
+            rc, rgc = aux(root.right)
+            
+            return max(root.val + lgc + rgc, lc + rc), lc + rc
+        
+        return max(aux(root))
+"""
